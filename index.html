@@ -5,8 +5,125 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;500&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!-- Header/Navbar -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#">Tola</a>
+                </div>
+                <div class="main-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blank</a></li>
+                        <li><a href="#projects-section">Projects</a></li>
+                        <li><a href="#">Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <!-- Hamburger Button -->
+                <button class="hamburger-button">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                </button>
+
+                <div class="mobile-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blank</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main">
+            <section id="hero-section">
+                <img src="images/personal-selfie.jpeg" id="hero-img" alt="picture of me" />
+                <div class="hero-text">
+                    <h1>Omotola Joseph</h1>
+                    <p class="grade">High School Junior</p>
+                    <p class="desc">Placeholder Text</p>
+                    <button>Download My Resume</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Body:Proects, Contact-->
+        <div class="body">
+            <section id="projects-section">
+                <h2>My Projects</h2>
+                <div class="projects-container">
+                    <!--Music Player-->
+                    <div class="project-card">
+                        <a href="https://jomotola.github.io/musicPlayer/">
+                            <img src="images/musicPlayer.png" alt="//" />
+                        </a>
+                        
+                        <div class="project-desc">
+                            <h4>Monster Adventure Game</h4>
+                            <p>Project desc</p>
+                            <button href="https://jomotola.github.io/musicPlayer/">View Project</button>
+                        </div>
+                    </div>
+                     <!--Monster Adventure Game-->
+                    <div class="project-card">
+                        <a href="https://jomotola.github.io/gameAdvinJS/">
+                            <img src="images/monstAdv.png" alt="//" />
+                        </a>
+                        
+                        <div class="project-desc">
+                            <h4>Project Name</h4>
+                            <p>Project desc</p>
+                            <button href="https://jomotola.github.io/gameAdvinJS/">View Project</button>
+                        </div>
+                    </div>
+                    <!--RPG Game-->
+                    <div class="project-card">
+                        <a href="https://jomotola.github.io/RPG-Game/">
+                            <img src="images/RPGgame.png" alt="//" />
+                        </a>
+                        
+                        <div class="project-desc">
+                            <h4>Project Name</h4>
+                            <p>Project desc</p>
+                            <button href="https://jomotola.github.io/RPG-Game/">View Project</button>
+                        </div>
+                    </div>
+                    <!--Old Porfolio-->
+                    <div class="project-card">
+                        <a href="https://jomotola.github.io/portfolio-Nextech/">
+                            <img src="images/nextech-portfolio.png" alt="//" />
+                        </a>
+                        
+                        <div class="project-desc">
+                            <h4>Project Name</h4>
+                            <p>Project desc</p>
+                            <button href="https://jomotola.github.io/portfolio-Nextech/">View Project</button>
+                        </div>
+                    </div>
+                    <!--Snake Game-->
+                    <div class="project-card">
+                        <a href="https://jomotola.github.io/snake-game/">
+                            <img src="images/snakeGame.png" alt="//" />
+                        </a>
+                        
+                        <div class="project-desc">
+                            <h4>Project Name</h4>
+                            <p>Project desc</p>
+                            <button href="https://jomotola.github.io/snake-game/">View Project</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact-section"></section>
+        </div>
 
         <script src="script.js"></script>
     </body>

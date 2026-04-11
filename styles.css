@@ -1,0 +1,350 @@
+/* variables for colors & fonts */ 
+:root {
+    /*colors -- pink theme */
+    --primary-color: #ffb6d9;       /* soft pastel pink */
+    --secondary-color: #fff0f6;     /* very light pink (almost white) */
+    --background-color: #ffe4ee;    /* blush pink background */
+    --surface-color: #ffffff;       /* cards / sections */
+    --accent-color: #ff6fa5;        /* brighter pink for buttons */
+
+    --text-color: #5a3a4a;          /* muted dark mauve (easy to read) */
+    --subtle-text: #a67c8f;         /* lighter text */
+    --border-color: #ffd1e3;        /* soft pink borders */
+    --hover-color: #ff8fbd;         /* hover states */
+
+    --highlight-color: #ffe066;     /* soft yellow highlight (adds contrast) */
+    --gradient-pink: linear-gradient(135deg, #ffb6d9, #ffd6ec);
+
+    /*fonts families*/
+    --font-heading: "Quicksand", sans-serif; 
+    --font-body: "Nunito", sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+}
+
+/* header/navbar */
+.header {
+    width: 100%;
+    height: 70px;
+    padding: 19px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    color: white;
+    z-index: 1;
+    transition: 500ms;
+}
+
+.header.sticking {
+    background-color: var(--surface-color);
+}
+
+.logo {
+    width: auto;
+    font-size: 1.3rem;
+}
+
+.logo a {
+    color: var(--subtle-text);
+    font-weight: 800;
+}
+
+.header > h1 {
+    width: 60%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+.navbar ul li {
+    color: var(--text-color);
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+}
+
+.navbar ul li:hover {
+    background-color: var(--hover-color);
+    color: var(--surface-color);
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%
+}
+
+.navbar ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* main-menu */
+.main-menu {
+    background-color: transparent;
+}
+
+.main-menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+    width: auto;
+    list-style: none;
+}
+
+.main-menu ul li {
+    padding: 20px;
+}
+
+.main-menu ul li:hover {
+    background-color: var(--hover-color);
+    color: var(--surface-color);
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%;
+}
+
+.hamburger-button {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 6px 0;
+}
+
+/* mobile-menu */
+.mobile-menu {
+    background-color: var(--surface-color);
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    box-shadow: var(--gradient-pink);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    padding-right: 10px;
+    margin: 80px auto 0 auto;
+}
+
+.mobile-menu ul li {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.mobile-menu ul li a:hover {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.main {
+    margin-top: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* hero section */
+#hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--gradient-pink);
+    padding: 20px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#hero-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--surface-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text {
+    max-width: 500px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--subtle-text);
+    margin-bottom: 20px;
+}
+
+.hero-text p.desc {
+    font-size: 1rem;
+}
+
+.hero-text button {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background-color: var(--hover-color);
+}
+
+/*Projects Container*/
+#projects-section {
+    padding: 60px 20px;
+    background-color: var(--gradient-pink);
+}
+
+#projects-section h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--surface-color);
+    border: 5px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 320px;
+    max-width: 340px;
+    min-width: 260px;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-desc {
+    padding: 20px;
+}
+
+.project-desc h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.project-desc p {
+    color: var(--subtle-text);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.project-desc button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.project-desc button:hover {
+    background-color: var(--hover-color);
+}
+
+
+
+/*Responsive Design*/
+@media (max-width: 768px) {
+    .projects-container {
+        gap: 16px;
+        padding: 10px;
+    }
+
+    .project-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
