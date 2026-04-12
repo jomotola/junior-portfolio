@@ -16,6 +16,7 @@ navObserver.observe(scrollWatcher);
 window.addEventListener("DOMContentLoaded", () => {
     const hamburgerButton = document.querySelector(".hamburger-button");
     const mobileMenu = document.querySelector(".mobile-menu");
+    const header = document.querySelector("header");
 
     hamburgerButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("active");
