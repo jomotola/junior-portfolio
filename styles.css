@@ -64,18 +64,21 @@ h1, h2, h3, h4, h5 {
 .header {
     width: 100%;
     height: 70px;
-    padding: 19px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
     background-color: transparent;
     position: fixed;
     top: 0;
     color: white;
-    z-index: 1;
+    z-index: 1000;
     transition: 500ms;
 }
 
 .header.sticking {
-    background-color: var(--surface-color);
-    color: var(--text-color);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -226,6 +229,10 @@ section, main, #projects-section, #hero-section {
     background: transparent;
 }
 
+section {
+    margin-bottom: 40px;
+}
+
 /* hero section */
 #hero-section {
     display: flex;
@@ -310,7 +317,7 @@ section, main, #projects-section, #hero-section {
     background-color: var(--surface-color);
     border: 5px solid var(--border-color);
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(255, 182, 217, 0.25);
+    box-shadow: 0 10px 25px rgba(255, 182, 217, 0.25);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex: 1 1 320px;

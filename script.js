@@ -1,12 +1,24 @@
 const header = document.querySelector(".header");
 const scrollWatcher = document.createElement("div");
 
-scrollWatcher.setAttribute("data-scroll=watcher", "");
+scrollWatcher.setAttribute("data-scroll-watcher", "");
 header.before(scrollWatcher);
 
 const navObserver = new IntersectionObserver(
     (entries) => {
         header.classList.toggle("sticking", !entries[0].isIntersecting);
     },
-    {rootMargin: "50px 0px 0px 0px"}
+    { rootMargin: "50px 0px 0px 0px" }
 );
+
+navObserver.observe(scrollWatcher); 
+
+window.addEventListener("DOMContentLoaded", () => {
+    const hamburgerButton = document.querySelector(".hamburger-button");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    hamburgerButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+        header.classList.toggle("slide");
+    });
+});
