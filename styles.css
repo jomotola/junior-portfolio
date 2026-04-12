@@ -13,17 +13,29 @@
     --hover-color: #ff8fbd;         /* hover states */
 
     --highlight-color: #ffe066;     /* soft yellow highlight (adds contrast) */
-    --gradient-pink: linear-gradient(135deg, #ffe4ee 0%, #ffd6ec 50%, #ffb6d9 100%);
+    --gradient-pink: linear-gradient(
+    180deg,
+    #fff0f6 0%,
+    #ffe4ee 40%,
+    #ffd6ec 70%,
+    #ffb6d9 100%
+);
 
     /*fonts families*/
     --font-heading: "Quicksand", sans-serif; 
     --font-body: "Nunito", sans-serif;
 }
 
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--gradient-pink);
+}
+
 html {
     height: 100%;
     width: 100%;
-    background: var(--gradient-pink);
 }
 
 * {
@@ -40,7 +52,6 @@ a {
 body {
     font-family: var(--font-body);
     color: var(--text-color);
-    background:;
     padding: 0 10px;
     
 }
@@ -208,6 +219,11 @@ h1, h2, h3, h4, h5 {
     margin-top: 0px;
     padding: 0px;
     width: 100%;
+}
+
+/*section*/
+section, main, #projects-section, #hero-section {
+    background: transparent;
 }
 
 /* hero section */
