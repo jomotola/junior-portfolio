@@ -84,7 +84,8 @@ button {
 }
 
 input,
-textarea {
+textarea,
+h1, h2, h3, p {
     cursor: url('fonts/cursor/beam__pink.cur'), text;
 }
 
