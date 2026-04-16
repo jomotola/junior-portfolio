@@ -6,8 +6,8 @@ A personal portfolio website showcasing my projects and skills as an aspiring so
 
 - Responsive design for desktop and mobile
 - Sticky glassy navigation bar
-- Project showcase with live links
-- Contact form powered by Formspree
+- Project cards with live links
+- Contact form using Formspree
 - Custom cursor and aesthetic UI elements
 
 ## Built With 🛠️
@@ -18,11 +18,11 @@ A personal portfolio website showcasing my projects and skills as an aspiring so
 - Formspree (for contact form)
 
 ## Projects Included 📂
-- Music Player 🎵
-- JavaScript Adventure Game 🎮
-- Snake Game 🐍
-- RPG Game 🧙
-- Previous Portfolio 💻
+- Music Player 
+- JavaScript Adventure Game 
+- Snake Game 
+- RPG Game
+- Previous Portfolio 
 
 
 ## Feel free to reach out!!
