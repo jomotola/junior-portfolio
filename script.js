@@ -1,7 +1,7 @@
 const header = document.querySelector(".header");
 const scrollWatcher = document.createElement("div");
 
-const contactForm = document.querySelector("form");
+const contactForm = document.getElementById("contact-form");
 const submitBtn = document.getElementById("submit-button");
 
 scrollWatcher.setAttribute("data-scroll-watcher", "");
@@ -27,15 +27,15 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-form.addEventListener("submit", async (e) => {
+contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    submitBtn.innerText = "Sending... ✨";
+    submitBtn.innerText = "Sending...";
 
-    const data = new FormData(form);
+    const data = new FormData(contactForm);
 
     try {
-        const response = await fetch(form.action, {
+        const response = await fetch(contactForm.action, {
             method: "POST",
             body: data,
             headers: {
@@ -44,15 +44,15 @@ form.addEventListener("submit", async (e) => {
         });
 
         if (response.ok) {
-            submitBtn.innerText = "Message sent 💖";
+            submitBtn.innerText = "Message sent!";
             submitBtn.style.background = "#6fdc8c";
-            form.reset();
+            contactForm.reset();
         } else {
-            submitBtn.innerText = "Oops! Something went wrong 😢";
+            submitBtn.innerText = "Something went wrong..";
             submitBtn.style.background = "#ff8fbd";
         }
     } catch (error) {
-        submitBtn.innerText = "Error sending message 😭";
+        submitBtn.innerText = "Error sending message";
         submitBtn.style.background = "#ff8fbd";
     }
 });
